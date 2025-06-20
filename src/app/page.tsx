@@ -1,9 +1,7 @@
-import { Button } from '@/components/ui/button';
-
 export default function Home() {
   return (
-    <div>
-      <Button>Hello, World</Button>
-    </div>
+    <section className="mx-auto max-w-[500px] px-5 pt-32 lg:pt-40">
+      <h1>Área inicial</h1>
+    </section>
   );
 }

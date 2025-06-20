@@ -1,19 +1,19 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import { cn } from '@/lib/utils';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({
-  weight: ['400', '500', '600', '700', '900'],
-  style: 'normal',
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
+  weight: ["400", "500", "600", "700", "900"],
+  style: "normal",
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: 'Click Petróleo e Gás',
-  description: 'Click Petróleo e Gás',
+  title: "Login Wocody - CPG",
+  description: "Login Wocody - CPG",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={cn('antialiased', inter.className)}>{children}</body>
+      <body className={cn("antialiased", inter.className)}>{children}</body>
     </html>
   );
 }
