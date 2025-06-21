@@ -7,16 +7,13 @@ import { redirect } from "next/navigation";
 export default async function login(formData: LoginSchema) {
   const cookieStore = await cookies();
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_SITE_URL}/api/auth/login`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+    const response = await fetch(`${process.env.BASE_URL}/api/auth/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify(formData),
+    });
     const { token, success, message } =
       (await response.json()) as LoginResponse;
 
